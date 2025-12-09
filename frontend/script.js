@@ -1,17 +1,17 @@
 async function mostrarUsuarios() {
-  const res = await fetch("http://localhost:8001/usuarios");
+  const res = await fetch("http://3.145.23.235:5001/usuarios");
   const data = await res.json();
   mostrarTabla(data, ["id", "nombre", "correo"], "Usuarios");
 }
 
 async function mostrarProductos() {
-  const res = await fetch("http://localhost:8002/productos");
+  const res = await fetch("http://3.145.23.235:5002/productos");
   const data = await res.json();
   mostrarTabla(data, ["id", "nombre", "precio"], "Productos");
 }
 
 async function mostrarPedidos() {
-  const res = await fetch("http://localhost:8003/pedidos");
+  const res = await fetch("http://3.145.23.235:5003/pedidos");
   const data = await res.json();
   mostrarTabla(data, ["id", "usuario_id", "producto_id"], "Pedidos");
 }
